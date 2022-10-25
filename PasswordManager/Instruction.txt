@@ -1,0 +1,20 @@
+1) Press Unlock 
+You have 2 section
+Left - section with TreeView
+Right - details about selected item from TreeView
+
+Add Item to Left Side:
+- press right mouse button
+- directory cna be made in directory (Tree structure)
+
+-- Add File:
+	Image - load image form your PC.
+	Password - make new group of password.
+
+Right section
+	Image - display image, and allows to save image on your PC.
+	Password:
+		- Add button - open section to create account you can type your Name, Email, Login, Password (Strength Bar)
+				you can also load your icon. Press Apply to save acount or Cancel to lose data.
+		Acount List - created acounts are listed with the data. Select Acount to see more details, 
+				then you can edit or delete selected account.
