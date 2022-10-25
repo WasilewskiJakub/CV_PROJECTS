@@ -1,0 +1,10 @@
+Left Mouse Button - reveal the field.
+Right Mouse Button - flag the field. CLick again to unflag. You must unflag to reveal the field.
+
+Menu Game:
+New Game - Start new game. with diferent field.
+Custom Size -  set size, and quantity of mines.
+
+Help Menu:
+About - info about game (nothing special).
+Debug - switch between hidden and unhidden mode.
