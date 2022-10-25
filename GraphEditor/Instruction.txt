@@ -1,0 +1,10 @@
+Graph Editor
+------------
+Program allows user to create graphs.
+
+Way to use:
+ Make Vertex- click left mouse button.
+ Select Vertex - click right mouse button on vertex.
+ Move Vertex - select vertex, press and hold scroll button during mouse move.
+ Create edge - select vertex and click left mouse button on other vertex, edge will be made between them.
+ Remove Edge - same as create edge.

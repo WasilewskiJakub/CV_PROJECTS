@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "wasilewskijWinForms/1.0.0": {
+        "runtime": {
+          "wasilewskijWinForms.dll": {}
+        },
+        "resources": {
+          "en-001/wasilewskijWinForms.resources.dll": {
+            "locale": "en-001"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "wasilewskijWinForms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
