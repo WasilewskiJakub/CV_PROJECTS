@@ -1,0 +1,34 @@
+Polygon Editor
+-------------------------------------
+Program has 2 operating modes:
+Create:
+	allows the user to create a polygon vertex by clicking the left mouse button.
+	In create mode it is not possible to create 2 vertices overlapping each other, the only possibility
+	is to click on the first vertex of the current polygon to close it.
+	In Create mode it is not possible to switch between Bresenham and System Line modes.
+	During creation, you can change the color of the next vertex with Choose Color.
+Edit:
+	When switching to Edit mode, the current polygon will be automatically closed, unless it has been closed earlier,
+	selecting edges and vertices is done by clicking on them with the left mouse button.
+	Depending on the selected object, we have different functions:
+	Vertex:
+		- Remove - removes a vertex and adjacent edges with their relations.
+		- Color - changes the vertex to the color of the currently selected color.
+	Edge:
+		- Remove - removes an edge with adjacent vertices.
+		- Split - creates a vertex in the middle of an edge, deleting relations from it.
+		- Length - keeps the current edge length permanently.
+		- Perpendicular - (select edge-> Perpendicular-> select edge-> Perpendicular) after that
+		the edges will become perpendicular to each other after the procedure.
+	Polygon:
+		- Select Polygon - when the flag is selected click on any vertex or edge of the polygon
+		will mark it.
+		- Remove - remove the selected polygon.	
+Moving an Object (Edge, Vertex, Polygon)
+	- Object moving is available when you are in edit mode and the object is selected. We move through
+	Press and hold the mouse scroll while moving the mouse.
+
+Relations:
+	- The limit of the length relation per polygon is n-1, where n - the number of edges.
+	- Perpendicular - perpendicularity consists in determining the straight line pattern describing the first edge, and
+	finding the pattern of a line perpendicular to it passing through one of the points from the edge no.2.
