@@ -1,0 +1,22 @@
+﻿<Window x:Class="TestTriangle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTriangle"
+        mc:Ignorable="d"
+        Icon="pack://application:,,,/TestTriangle;component/Pictures/ICON2.png"
+        Title="TriangleMesh Reader" MinHeight="500" MinWidth="600" Height="720" Width="1280" WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow" Background="#FF000F24" ResizeMode="NoResize" Closing="OffActiveThreads">
+    <Grid Background="#FF000F24">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="211*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="117*"/>
+        </Grid.RowDefinitions>
+        <Frame NavigationUIVisibility="Hidden" x:Name="Back" Grid.RowSpan="2" Grid.ColumnSpan="2"></Frame>
+    </Grid>
+</Window>

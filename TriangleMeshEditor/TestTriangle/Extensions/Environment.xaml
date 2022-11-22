@@ -1,0 +1,228 @@
+﻿<Page x:Class="TestTriangle.Extensions.EnvironmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestTriangle.Extensions"
+      xmlns:colorpicker="clr-namespace:ColorPicker;assembly=ColorPicker"
+    mc:Ignorable="d" 
+      d:DesignHeight="630" d:DesignWidth="220"
+      Title="Environment" Margin="0">
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="OptionMarkFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="14,0,0,0" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="OptionMark.Static.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="OptionMark.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="OptionMark.Static.Glyph" Color="#FFFFA406"/>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Background" Color="#FFF3F9FF"/>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="#FF5593FF"/>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Background" Color="#FFD9ECFF"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="#FF3C77DD"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="OptionMark.Disabled.Background" Color="#FFE6E6E6"/>
+        <SolidColorBrush x:Key="OptionMark.Disabled.Border" Color="#FFBCBCBC"/>
+        <SolidColorBrush x:Key="OptionMark.Disabled.Glyph" Color="#FF707070"/>
+        <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource OptionMark.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource OptionMark.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="checkBoxBorder" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid x:Name="markGrid">
+                                    <Path x:Name="optionMark" Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z " Fill="{StaticResource OptionMark.Static.Glyph}" Margin="1" Opacity="0" Stretch="None"/>
+                                    <Rectangle x:Name="indeterminateMark" Fill="{StaticResource OptionMark.Static.Glyph}" Margin="2" Opacity="0"/>
+                                </Grid>
+                            </Border>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasContent" Value="true">
+                                <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}"/>
+                                <Setter Property="Padding" Value="4,-1,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
+                                <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Disabled.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Disabled.Glyph}"/>
+                                <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Disabled.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
+                                <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
+                                <Setter Property="Opacity" TargetName="indeterminateMark" Value="0"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="{x:Null}">
+                                <Setter Property="Opacity" TargetName="optionMark" Value="0"/>
+                                <Setter Property="Opacity" TargetName="indeterminateMark" Value="1"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label Foreground="White" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Environment"/>
+            <Separator HorizontalAlignment="Center" Width="170" Background="#FFFFA406" Height="2" VerticalAlignment="Bottom" Margin="0" Padding="0"/>
+        </Grid>
+        <ScrollViewer Margin="0,15,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Expander Margin="0,0,0,0" ExpandDirection="Down" HorizontalAlignment="Left" Width="200">
+                    <Expander.Header>
+                        <Label Margin="10,0,0,0" Content="Light Position" FontSize="18" Foreground="White"/>
+                    </Expander.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="Transparent" Name="radbord" MouseLeftButtonDown="ChooseRadial" BorderThickness="0,0,0,1" BorderBrush="White">
+                                <Image Name="radimg"  Width="20" Source="pack://application:,,,/TestTriangle;component/Pictures/Worksheet/ENV/RADIAL.png"/>
+                            </Border>
+                            <Border Background="Transparent" Grid.Column="1" MouseLeftButtonDown="ChooseXYZ" Name="xyzbord" BorderThickness="0,0,0,0" BorderBrush="White">
+                                <Image Name="xyzimg"  Width="20" Source="pack://application:,,,/TestTriangle;component/Pictures/Worksheet/ENV/XYZ.png"/>
+                            </Border>
+                            <Border Background="Transparent" Grid.Column="2" MouseLeftButtonDown="ChooseAnim" Name="animbord" BorderThickness="0,0,0,0" BorderBrush="White">
+                                <Image Name="animimg"  Width="20" Source="pack://application:,,,/TestTriangle;component/Pictures/Worksheet/ENV/ANIM.png"/>
+                            </Border>
+                        </Grid>
+                        <Frame Name="LightFrame" NavigationUIVisibility="Hidden" Grid.Row="1" Height="420"/>
+                    </Grid>
+                </Expander>
+                <Expander Margin="0,0,0,0" ExpandDirection="Down" HorizontalAlignment="Left" Width="200">
+                    <Expander.Header>
+                        <Label Margin="10,0,0,0" Content="Properties" FontSize="18" Foreground="White"/>
+                    </Expander.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="Transparent" Name="objbord" MouseLeftButtonDown="Chooseobj" BorderThickness="0,0,0,1" BorderBrush="White">
+                                <Image Name="objimg"  Width="40" Source="pack://application:,,,/TestTriangle;component/Pictures/Worksheet/ENV/OBJECT.png"/>
+                            </Border>
+                            <Border Grid.Column="1" Background="Transparent" Name="backgroundbord" MouseLeftButtonDown="Choosebackground" BorderThickness="0,0,0,0" BorderBrush="White">
+                                <Image Name="backgroundimg"  Width="35" Source="pack://application:,,,/TestTriangle;component/Pictures/Worksheet/ENV/Background.png"/>
+                            </Border>
+                        </Grid>
+                        <Frame Grid.Row="1" Name="DetailFrame" NavigationUIVisibility="Hidden"/>
+                    </Grid>
+                </Expander>
+                <Expander Margin="0,0,0,0" ExpandDirection="Down" HorizontalAlignment="Left" Width="200">
+                    <Expander.Header>
+                        <Label Margin="10,0,0,0" Content="Texture" FontSize="18" Foreground="White"/>
+                    </Expander.Header>
+                    <StackPanel>
+                        <Label Content="Property" FontSize="18" Foreground="White" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Grid Height="80">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Margin="8" BorderBrush="#FFFFA406" BorderThickness="2">
+                                <Image Name="PreviewTexture"/>
+                            </Border>
+                            <Button Content="Load Texture" Foreground="White" Name="LoadTexture" Grid.Column="1" Width="100" Height="30" Background="Transparent" BorderBrush="#FFFFA406" BorderThickness="2" Click="LoadTexture_Click"/>
+                        </Grid>
+                        <Grid Height="30" Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Checked="SetText" Unchecked="disabletext" IsEnabled="false" Name="setextbut" Style="{DynamicResource CheckBoxStyle1}" FlowDirection="LeftToRight" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <Label Grid.Column="1" Content="Set Texture " VerticalAlignment="Center" Foreground="White" FontSize="13"/>
+                        </Grid>
+
+                    </StackPanel>
+                </Expander>
+                <Expander Margin="0,0,0,0" ExpandDirection="Down" HorizontalAlignment="Left" Width="200">
+                    <Expander.Header>
+                        <Label Margin="10,0,0,0" Content="Normal Map" FontSize="18" Foreground="White"/>
+                    </Expander.Header>
+                    <StackPanel>
+                        <Label Content="Property" FontSize="18" Foreground="White" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Grid Height="80">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Margin="8" BorderBrush="#FFFFA406" BorderThickness="2">
+                                <Image Name="PreviewMap"/>
+                            </Border>
+                            <Button Content="Load Map" Foreground="White" Name="LoadMap" Grid.Column="1" Width="100" Height="30" Background="Transparent" BorderBrush="#FFFFA406" BorderThickness="2" Click="LoadMap_Click"/>
+                        </Grid>
+                        <Grid Height="30" Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Checked="SetMap" Unchecked="disableMap" Name="setmapbut" IsEnabled="false" Style="{DynamicResource CheckBoxStyle1}" FlowDirection="LeftToRight" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <Label Grid.Column="1" Content="Set Map" VerticalAlignment="Center" Foreground="White" FontSize="13"/>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="CanvasPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\AnimMove.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\DetailsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\Environment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\Instruction.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\LightPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\OBJColors.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\RadialMove.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Extensions\XYZMove.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InstructionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoadFile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Worksheet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="CanvasPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\AnimMove.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\DetailsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\Environment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\Instruction.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\LightPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\OBJColors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\RadialMove.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Extensions\XYZMove.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InstructionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoadFile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Worksheet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

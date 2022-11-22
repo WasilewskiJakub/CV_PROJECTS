@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FileHistory\Data\**" />
+    <EmbeddedResource Remove="FileHistory\Data\**" />
+    <None Remove="FileHistory\Data\**" />
+    <Page Remove="FileHistory\Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ICON.png" />
+    <None Remove="Pictures\ICON2.png" />
+    <None Remove="Pictures\LOGO.png" />
+    <None Remove="Pictures\loupe.png" />
+    <None Remove="Pictures\TLO.jpg" />
+    <None Remove="Pictures\Worksheet\Details.png" />
+    <None Remove="Pictures\Worksheet\ENV.png" />
+    <None Remove="Pictures\Worksheet\ENV\ANIM.png" />
+    <None Remove="Pictures\Worksheet\ENV\Background.png" />
+    <None Remove="Pictures\Worksheet\ENV\CUBE.png" />
+    <None Remove="Pictures\Worksheet\ENV\OBJECT.png" />
+    <None Remove="Pictures\Worksheet\ENV\PAUSE.png" />
+    <None Remove="Pictures\Worksheet\ENV\PLAY.png" />
+    <None Remove="Pictures\Worksheet\ENV\RADIAL.png" />
+    <None Remove="Pictures\Worksheet\ENV\XYZ.png" />
+    <None Remove="Pictures\Worksheet\EXIT_ICON.png" />
+    <None Remove="Pictures\Worksheet\File.png" />
+    <None Remove="Pictures\Worksheet\INST.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PixiEditor.ColorPicker" Version="3.3.1" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\ICON2.png" />
+    <Resource Include="Pictures\LOGO.png" />
+    <Resource Include="Pictures\loupe.png" />
+    <Resource Include="Pictures\TLO.jpg" />
+    <Resource Include="Pictures\Worksheet\Details.png" />
+    <Resource Include="Pictures\Worksheet\ENV.png" />
+    <Resource Include="Pictures\Worksheet\ENV\ANIM.png" />
+    <Resource Include="Pictures\Worksheet\ENV\Background.png" />
+    <Resource Include="Pictures\Worksheet\ENV\CUBE.png" />
+    <Resource Include="Pictures\Worksheet\ENV\OBJECT.png" />
+    <Resource Include="Pictures\Worksheet\ENV\PAUSE.png" />
+    <Resource Include="Pictures\Worksheet\ENV\PLAY.png" />
+    <Resource Include="Pictures\Worksheet\ENV\RADIAL.png" />
+    <Resource Include="Pictures\Worksheet\ENV\XYZ.png" />
+    <Resource Include="Pictures\Worksheet\EXIT_ICON.png" />
+    <Resource Include="Pictures\Worksheet\File.png" />
+    <Resource Include="Pictures\Worksheet\INST.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
