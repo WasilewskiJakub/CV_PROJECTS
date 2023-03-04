@@ -181,7 +181,7 @@ void PutFlague(HWND &hWnd,HINSTANCE hInst)
     RECT rc;
     GetClientRect(hWnd, &rc);
     HDC hdc = GetDC(hWnd);
-    HBITMAP Flaga = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+    HBITMAP Flaga = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP3));
     HDC CompDC = CreateCompatibleDC(hdc);
     HBITMAP OBitmap = (HBITMAP)SelectObject(CompDC, Flaga);
     BITMAP bmInfo;

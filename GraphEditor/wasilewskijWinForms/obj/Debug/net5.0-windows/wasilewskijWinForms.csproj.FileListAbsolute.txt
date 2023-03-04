@@ -19,3 +19,24 @@ C:\Users\Admin\Desktop\WinForms16_Home_203_wasilewskij (1)\wasilewskijWinForms\w
 C:\Users\Admin\Desktop\WinForms16_Home_203_wasilewskij (1)\wasilewskijWinForms\wasilewskijWinForms\obj\Debug\net5.0-windows\ref\wasilewskijWinForms.dll
 C:\Users\Admin\Desktop\WinForms16_Home_203_wasilewskij (1)\wasilewskijWinForms\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.pdb
 C:\Users\Admin\Desktop\WinForms16_Home_203_wasilewskij (1)\wasilewskijWinForms\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.genruntimeconfig.cache
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\wasilewskijWinForms.exe
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\wasilewskijWinForms.deps.json
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\wasilewskijWinForms.runtimeconfig.json
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\wasilewskijWinForms.runtimeconfig.dev.json
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\wasilewskijWinForms.dll
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\wasilewskijWinForms.pdb
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\bin\Debug\net5.0-windows\en-001\wasilewskijWinForms.resources.dll
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.csproj.AssemblyReference.cache
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.Form1.resources
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.Form1.en-001.resources
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.csproj.GenerateResource.cache
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.AssemblyInfoInputs.cache
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.AssemblyInfo.cs
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.csproj.CoreCompileInputs.cache
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\en-001\wasilewskijWinForms.resources.dll
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.dll
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\refint\wasilewskijWinForms.dll
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.pdb
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\wasilewskijWinForms.genruntimeconfig.cache
+D:\Programy\GitHub\CV_PROJECTS\GraphEditor\wasilewskijWinForms\obj\Debug\net5.0-windows\ref\wasilewskijWinForms.dll
